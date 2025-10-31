@@ -1,10 +1,19 @@
-const { page } = require('@playwright/test');
+// const { page } = require('@playwright/test');
 
-const {Tables} = require('./Table');
+const {Home_page} = require('./Home_Page');
+const {HotelSelection} = require('./Hotel_Selection');
+const {CustomerDetials} = require('./CustomerDetials');
 
 
 class PagesInit {
-    Tables = new Tables(this.page);
+    // Home_page = new Home_page(this.page);
+
+     constructor(page) {
+        this.page = page;
+        this.Home_page = new Home_page(this.page);
+        this.HotelSelection = new HotelSelection(this.page);
+        this.CustomerDetials = new CustomerDetials(this.page);
+    }
 
 }
 

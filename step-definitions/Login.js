@@ -63,6 +63,12 @@ Then('Accepting the cookies', async function () {
 Then('Then User enters room guest details and proceed to book the hotel', async function () {
 
     const pageObjs = new PagesInit(this.page);
-    await pageObjs.Home_page.HotelSelection();
+    await pageObjs.HotelSelection.HotelSelection();
 
+});
+
+Then('Then User enters the customer details and proceed to payment page', async function () {
+
+    const pageObjs = new PagesInit(this.page);
+    await pageObjs.CustomerDetials.CustomerDetials();
 });
